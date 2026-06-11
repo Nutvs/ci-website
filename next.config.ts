@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import { resolve } from "path";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  allowedDevOrigins: ['192.168.140.1'],
+  turbopack: {
+    root: resolve(process.cwd()),
+  },
 };
 
 export default nextConfig;
